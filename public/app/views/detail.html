@@ -1,28 +1,11 @@
-<div class="content--inner members">
+<div class="content--inner">
 
-    <h1 class="c-page-title"><span translate>Edit</span> <i>{{itemData.data.name}}</i></h1>
+	<h1 class="c-page-title">
+		<span translate>Edit</span>
+	</h1>
 
-    <div ng-form name="resourceForms.itemForm">
-
-        <fieldset class="c-form__fieldset">
-            <legend class="c-form__fieldset__legend" translate>Test information</legend>
-
-            <div class="form-section c-form__fieldset__content u-clear">
-                <div class="fl" ng-class="{'u-width-5-6': itemData.data.avatarUrl}">
-                    <field
-                        class="fl u-width-6-6"
-                        label="'Username' | translate"
-                        name="member_username"
-                        type="'text'"
-                        model="itemData.name"
-                        field-data="resourceForms.metaForm"
-                        readonly="true"
-                        placeholder="'First name' | translate">
-                    </field>
-                </div>
-            </div>
-
-        </fieldset>
-    </div>
+	<div ng-form name="resourceForms.itemForm">
+		<span class="customClass">Something with custom styling from the module as an example</span>
+	</div>
 
 </div>

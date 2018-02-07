@@ -1,22 +1,26 @@
-require("rootpath")();
+"use strict";
 
-var usersController = require("../controllers/users");
+const boilerplateController = require("../controllers/boilerplate");
 
 // Get the configuration of the WCM
-var config = require("config")();
+const config = require("@wcm/module-helper").getConfig();
 // This is a helper middleware function to check if the user is logged in
-var ProfileSecurity = require("app/helpers/modules/lib").ProfileSecurity;
+const ProfileSecurity = require("@wcm/module-helper").profileSecurity;
 // This is a helper middleware function to specify which method is used. This will be used in the PermissionsSecurity function.
 // There are four methods available: read, create, update and delete.
-var MethodSecurity = require("app/helpers/modules/lib").MethodSecurity;
+const MethodSecurity = require("@wcm/module-helper").methodSecurity;
 // This is a helper middleware function generator that returns a middleware function that can be injected into route as seen below.
 // The function will check if the user has the right permissions to execute this action.
 // You need to specify the operation type that needs to be checked against (in this case it is the operation type specified in our package.json file).
-var PermissionsSecurity = require("app/helpers/modules/lib").PermissionsSecurity("members");
+const PermissionsSecurity = require("@wcm/module-helper").permissionsSecurity("boilerplate");
 
 // Building the baseUrl based on the configuration. Every API call needs to be located after the api/ route
-var baseUrl = "/" + config.api.prefix + config.api.version + "test";
+const baseUrl = "/" + config.api.prefix + config.api.version + "boilerplate";
 
-module.exports = function (app) {
-	app.route(baseUrl + "/users").get(usersController.get);
+module.exports = (app) => {
+
+	app.route(baseUrl + "/public").get(boilerplateController.test("public"));
+
+	app.route(baseUrl + "/protected").get(ProfileSecurity, MethodSecurity.read, PermissionsSecurity, boilerplateController.test("protected"));
+
 }

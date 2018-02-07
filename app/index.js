@@ -1,9 +1,19 @@
-var routes = require("./routes");
+"use strict";
 
-module.exports = function (app) {
+const setupRoutes = require("./routes");
+const variablesHelper = require("./helpers/variables");
+const hooksController = require("./controllers/hooks");
+
+module.exports = (app, hooks, moduleInfo) => {
+	// Get variables
+	variablesHelper.reload(moduleInfo);
+
+	// Handle hooks
+	hooksController.handleHooks(hooks);
+
 	// Setup routes
-	routes(app);
+	setupRoutes(app, moduleInfo);
 };
 
-// Expose API
+// Exposed API (for other modules)
 module.exports.api = require("./api");

@@ -3,7 +3,7 @@
 module.exports = {
 	"extends": [
 		"@district01/eslint-config",
-		"@district01/eslint-config/lib/es5.js"
+		"@district01/eslint-config/lib/es6.js"
 	],
 
 	// Override rules if needed.

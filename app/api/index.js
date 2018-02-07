@@ -1,5 +1,7 @@
-var getUser = require("./getUser");
+"use strict";
+
+const exposedMethod = require("./exposedMethod");
 
 module.exports = {
-    getUser: getUsesr
+	exposedMethod: exposedMethod
 };

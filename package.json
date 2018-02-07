@@ -1,11 +1,16 @@
 {
-    "name": "wcm-test",
-    "version": "1.0.45",
-    "description": "Test module",
+    "name": "@wcm/boilerplate",
+    "version": "0.0.1",
+    "description": "Boilerplate module",
     "main": "app",
-    "scripts": {},
+    "scripts": {
+        "test": "NODE_ENV=test APP=test ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha"
+    },
+    "publishConfig": {
+        "@wcm:registry": "https://nexusrepo.antwerpen.be/repository/npm-private"
+    },
     "keywords": [
-        "Test",
+        "Boilerplate",
         "WCM",
         "Pelorus",
         "module",
@@ -15,276 +20,41 @@
         "angularDirPath": "public/app/",
         "cssDirPath": "public/styles/",
         "moduleConfig": {
-            "translationKey": "Test",
-            "operationType": "test",
-            "icon": "user-circle-o",
+            "angularModule": "wcm-boilerplate",
+            "translationKey": "Boilerplate",
+            "operationType": "boilerplate",
+            "icon": "ban",
             "type": "system",
+            "machineName": "boilerplate",
             "navigationItem": true,
             "authentication": {
                 "requiresLogin": true
             }
         },
-        "variables": [
-            {
-                "group": "Main",
-                "key": "main",
-                "variables": [
-                    {
-                        "label": "Application apikey",
-                        "description": "The apikey of your application to access this tenant.",
-                        "key": "apikey",
-                        "value": "000-000",
-                        "type": "text",
-                        "required": true
-                    }
-                ]
-            },
-            {
-                "group": "Local",
-                "key": "local",
-                "enabled": true,
-                "accordion": true,
-                "variables": [
-                    {
-                        "description": "Check if my user needs to be immidiatly enabled after register",
-                        "key": "enabled_on_register",
-                        "value": {
-                            "enabled": false
-                        },
-                        "options": [
-                            {
-                                "key": "enabled",
-                                "label": "User enabled on register"
-                            }
-                        ],
-                        "type": "checkbox",
-                        "required": false
-                    },
-                    {
-                        "label": "From label",
-                        "description": "This will result in a 'from' value of [From name] <email>",
-                        "key": "from",
-                        "value": "Members",
-                        "type": "text",
-                        "required": false
-                    },
-                    {
-                        "label": "Subject",
-                        "description": "The subject of the password reset e-mail.",
-                        "key": "subject",
-                        "value": "Wachtwoord herstellen",
-                        "type": "text",
-                        "required": false
-                    },
-                    {
-                        "label": "Body",
-                        "description": "The body content of a pasword reset e-mail. (leave empty for default)",
-                        "key": "body",
-                        "value": "<p>Beste {{name}},</p><p>Er is een aanvraag gebeurd om het paswoord van uw account te herstellen.<br />Gelieve op de volgende link te klikken indien u de herstelling van u passwoord aangevraagd hebt.</p>",
-                        "type": "richtext",
-                        "required": false
-                    }
-                ]
-            },
-            {
-                "group": "Twitter",
-                "key": "twitter",
-                "enabled": true,
-                "accordion": true,
-                "variables": [
-                    {
-                        "description": "Check if my user needs to be immidiatly enabled after register",
-                        "key": "enabled_on_register",
-                        "value": {
-                            "enabled": false
-                        },
-                        "options": [
-                            {
-                                "key": "enabled",
-                                "label": "User enabled on register"
-                            }
-                        ],
-                        "type": "checkbox",
-                        "required": false
-                    },
-                    {
-                        "label": "Consumer key",
-                        "description": "Your consumer key for Twitter.",
-                        "key": "consumer_key",
-                        "value": "",
-                        "type": "text",
-                        "required": true
-                    },
-                    {
-                        "label": "Consumer secret",
-                        "description": "The consumer secret for Twitter",
-                        "key": "consumer_secret",
-                        "value": "",
-                        "type": "text",
-                        "required": true
-                    }
-                ]
-            },
-            {
-                "group": "M-profiel",
-                "key": "mProfiel",
-                "enabled": true,
-                "accordion": true,
-                "variables": [
-                    {
-                        "description": "Check if my user needs to be immidiatly enabled after register",
-                        "key": "enabled_on_register",
-                        "value": {
-                            "enabled": false
-                        },
-                        "options": [
-                            {
-                                "key": "enabled",
-                                "label": "User enabled on register"
-                            }
-                        ],
-                        "type": "checkbox",
-                        "required": false
-                    },
-                    {
-                        "label": "Client id",
-                        "description": "Your client id credentials for M-profiel",
-                        "key": "client_id",
-                        "value": "",
-                        "type": "text",
-                        "required": true
-                    },
-                    {
-                        "label": "Client secret",
-                        "description": "The client secret credentials for M-profiel",
-                        "key": "client_secret",
-                        "value": "",
-                        "type": "text",
-                        "required": true
-                    },
-                    {
-                        "label": "Oauth2 domain",
-                        "description": "Fill in the oauth2 domain to access M-Profiel (eg. \"https://api-oauth2-o.antwerpen.be/v1/\")",
-                        "key": "auth_domain",
-                        "value": "https://api-oauth2.antwerpen.be/v1/",
-                        "type": "text",
-                        "required": true
-                    },
-                    {
-                        "label": "Domain",
-                        "description": "Domain for getting the M-profiel data.",
-                        "key": "domain",
-                        "value": "https://api-gw-p.antwerpen.be",
-                        "type": "text",
-                        "required": true
-                    },
-                    {
-                        "label": "API version",
-                        "description": "The version of the M-profiel Engine",
-                        "key": "version",
-                        "value": "v1",
-                        "type": "text",
-                        "required": true
-                    },
-                    {
-                        "label": "Scope",
-                        "description": "Specify what data to receive from M-profiel",
-                        "key": "scope",
-                        "value": "all",
-                        "type": "text",
-                        "required": true
-                    }
-                ]
-            },
-            {
-                "group": "A-profiel",
-                "key": "aProfiel",
-                "enabled": true,
-                "accordion": true,
-                "variables": [
-                    {
-                        "description": "Check if user needs to be immidiatly enabled after register",
-                        "key": "enabled_on_register",
-                        "value": {
-                            "enabled": false
-                        },
-                        "options": [
-                            {
-                                "key": "enabled",
-                                "label": "User enabled on register"
-                            }
-                        ],
-                        "type": "checkbox",
-                        "required": false
-                    },
-                    {
-                        "label": "Client id",
-                        "description": "Your client id credentials for A-profiel",
-                        "key": "client_id",
-                        "value": "",
-                        "type": "text",
-                        "required": true
-                    },
-                    {
-                        "label": "Client secret",
-                        "description": "The client secret credentials for A-profiel",
-                        "key": "client_secret",
-                        "value": "",
-                        "type": "text",
-                        "required": true
-                    },
-                    {
-                        "label": "Oauth2 domain",
-                        "description": "Fill in the oauth2 domain to access (eg. https://api-oauth2.antwerpen.be/v1/)",
-                        "key": "auth_domain",
-                        "value": "https://api-oauth2.antwerpen.be/v1/",
-                        "type": "text",
-                        "required": true
-                    },
-                    {
-                        "label": "Domain",
-                        "description": "Domain for getting the profile data. (eg. https://api-gw-p.antwerpen.be)",
-                        "key": "domain",
-                        "value": "https://api-gw-p.antwerpen.be",
-                        "type": "text",
-                        "required": true
-                    },
-                    {
-                        "label": "API version",
-                        "description": "The version of the Aprofiel Engine",
-                        "key": "version",
-                        "value": "v1",
-                        "type": "text",
-                        "required": true
-                    },
-                    {
-                        "label": "Scope",
-                        "description": "Specify what data to receive",
-                        "key": "scope",
-                        "value": "username name avatar email phone",
-                        "type": "text",
-                        "required": true
-                    }
-                ]
-            }
-        ]
+        "variables": []
     },
     "author": "Jeroen Valcke",
     "license": "ISC",
     "dependencies": {
-        "lodash": "~4.17.4",
-        "node-uuid": "~1.4.7",
-        "q": "~1.4.1",
+        "@wcm/module-helper": "1.0.0",
+        "glob": "^7.1.2",
+        "path": "^0.12.7",
+        "q": "^1.5.1",
+        "ramda": "^0.25.0",
         "rootpath": "~0.1.2"
     },
     "devDependencies": {
         "@district01/eslint-config": "1.0.0",
         "apidoc-swagger": "git+https://github.com/JvJefke/apidoc-swagger.git",
+        "chai": "~4.1.2",
         "gulp": "~3.9.1",
         "gulp-angular-templatecache": "~2.0.0",
         "gulp-apidoc": "~0.2.0",
         "gulp-apidoc-swagger": "~0.2.2",
         "gulp-replace": "~0.5.4",
-        "run-sequence": "~1.2.2"
+        "istanbul": "^0.4.5",
+        "mocha": "~4.0.1",
+        "run-sequence": "~1.2.2",
+        "sinon": "~4.0.2"
     }
 }

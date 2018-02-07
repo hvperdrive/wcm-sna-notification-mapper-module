@@ -1,20 +1,23 @@
 "use strict";
 
-angular.module("test_1.0.0.directives", []);
-angular.module("test_1.0.0.factories", []);
-angular.module("test_1.0.0.services", ["test_1.0.0.factories"]);
-angular.module("test_1.0.0.controllers", ["test_1.0.0.services"]);
+(function(angular) {
+	angular.module("wcm-boilerplate_0.0.1.factories", []);
+	angular.module("wcm-boilerplate_0.0.1.services", ["wcm-boilerplate_0.0.1.factories"]);
+	angular.module("wcm-boilerplate_0.0.1.controllers", ["wcm-boilerplate_0.0.1.services"]);
+	angular.module("wcm-boilerplate_0.0.1.directives", ["wcm-boilerplate_0.0.1.controllers"]);
 
-angular.module("test_1.0.0", [
+	angular.module("wcm-boilerplate_0.0.1", [
 
-    "pelorus.services",
+		"pelorus.services",
 
-    "test_1.0.0.directives",
-    "test_1.0.0.factories",
-    "test_1.0.0.services",
-    "test_1.0.0.controllers"
+		"wcm-boilerplate_0.0.1.factories",
+		"wcm-boilerplate_0.0.1.services",
+		"wcm-boilerplate_0.0.1.controllers",
+		"wcm-boilerplate_0.0.1.directives"
 
-])
-.run([function() {
-    console.log("Test module is available!"); // eslint-disable-line no-console
-}]);
+	])
+	.run([function () {
+		console.log("Boilerplate module is loaded and available!"); // eslint-disable-line no-console
+	}]);
+})(window.angular);
+
