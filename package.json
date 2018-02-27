@@ -1,7 +1,7 @@
 {
-    "name": "@wcm/boilerplate",
+    "name": "@wcm/sna-notification-mapper",
     "version": "0.0.1",
-    "description": "Boilerplate module",
+    "description": "SnA notificaton mapper",
     "main": "app",
     "scripts": {
         "test": "NODE_ENV=test APP=test ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha"
@@ -10,37 +10,26 @@
         "@wcm:registry": "https://nexusrepo.antwerpen.be/repository/npm-private"
     },
     "keywords": [
-        "Boilerplate",
+        "Notifications",
+        "Mapper",
+        "Emitter",
+        "SNA",
+        "Slim naar Antwerpen",
         "WCM",
         "Pelorus",
         "module",
         "CMS"
     ],
     "wcmModule": {
-        "angularDirPath": "public/app/",
-        "cssDirPath": "public/styles/",
-        "moduleConfig": {
-            "angularModule": "wcm-boilerplate",
-            "translationKey": "Boilerplate",
-            "operationType": "boilerplate",
-            "icon": "ban",
-            "type": "system",
-            "machineName": "boilerplate",
-            "navigationItem": true,
-            "authentication": {
-                "requiresLogin": true
-            }
-        },
         "variables": []
     },
     "author": "Jeroen Valcke",
     "license": "ISC",
     "dependencies": {
         "@wcm/module-helper": "1.0.0",
-        "glob": "^7.1.2",
         "path": "^0.12.7",
         "q": "^1.5.1",
-        "ramda": "^0.25.0",
+        "request": "^2.83.0",
         "rootpath": "~0.1.2"
     },
     "devDependencies": {

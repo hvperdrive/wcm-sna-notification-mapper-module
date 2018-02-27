@@ -1,6 +1,6 @@
-# wcm-boilerplate-module
+# @wcm/sna-notification-mapper
 
-[Description]
+This module registers mappers & emitters to the notification module specific for SNA push notifications
 
 ## Prerequisites
  - A running implementation of the Pelorus CMS in multitenancy mode is needed either locally or on a server.
@@ -14,10 +14,6 @@
 3. Add module to the Pelorus CMS tenant/instance in peloruse multitenancy instance
 
 ## Usage
-
-### API
-You can find the API reference in the swagger/output folder as a swagger definition.
-You can beautify the output by copying the content into a swagger editor (eg. http://editor.swagger.io/#/).
 
 ### Implementation
 

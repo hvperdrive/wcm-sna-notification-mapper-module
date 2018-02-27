@@ -1,19 +1,14 @@
 "use strict";
 
-const setupRoutes = require("./routes");
 const variablesHelper = require("./helpers/variables");
 const hooksController = require("./controllers/hooks");
+const RegisterHelper = require("./helpers/register");
 
 module.exports = (app, hooks, moduleInfo) => {
-	// Get variables
-	variablesHelper.reload(moduleInfo);
+	// Get variables and register all mappers & emitters
+	variablesHelper.reload(moduleInfo)
+		.then(() => RegisterHelper.init())
 
 	// Handle hooks
 	hooksController.handleHooks(hooks);
-
-	// Setup routes
-	setupRoutes(app, moduleInfo);
 };
-
-// Exposed API (for other modules)
-module.exports.api = require("./api");

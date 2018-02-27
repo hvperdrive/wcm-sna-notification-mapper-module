@@ -1,15 +1,17 @@
 "use strict";
 
 const variablesHelper = require("../helpers/variables");
+const RegisterHelper = require("../helpers/register");
 
 const onLoadComplete = () => {
-	// Initiate passport strategies
-	variablesHelper.reload();
+	return variablesHelper.reload()
+		.then(() => RegisterHelper.registerAll());
 };
 const onConfigurationChanged = () => {
-	// Initiate passport strategies
-	variablesHelper.reload();
+	return variablesHelper.reload()
+		.then(() => RegisterHelper.registerAll());
 };
+const beforeRemove = () => RegisterHelper.destroy();
 
 module.exports.handleHooks = (hooks) => {
 	var myHooks = {
