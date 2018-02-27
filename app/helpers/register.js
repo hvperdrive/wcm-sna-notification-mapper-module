@@ -9,6 +9,10 @@ const _registerOnNotificationInstall = () => registerAll();
 const registerAll = () => {
 	return ModuleHelper.getModule("@wcm/generic-notifications")
 		.then((notificationAPI) => {
+			if (!notificationAPI) {
+				throw "Generic notifications module is not ready yet";
+			}
+
 			Object.keys(mappers).forEach((key) => notificationAPI.registerMapper(key, mappers[key]));
 			Object.keys(emitters).forEach((key) => notificationAPI.registerEmitter(key, emitters[key]));
 		});
@@ -18,6 +22,9 @@ const registerAll = () => {
 const unregisterAll = () => {
 	return ModuleHelper.getModule("@wcm/generic-notifications")
 		.then((notificationAPI) => {
+			if (!notificationAPI) {
+				return;
+			}
 			Object.keys(mappers).forEach((key) => notificationAPI.unregisterMapper(key));
 			Object.keys(emitters).forEach((key) => notificationAPI.unregisterEmitter(key));
 		});
