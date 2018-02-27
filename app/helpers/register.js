@@ -2,6 +2,7 @@ const ModuleHelper = require("@wcm/module-helper")
 const mappers = require("./mappers");
 const emitters = require("./emitters");
 
+// We need to be able to unregister event listeners on module unninstallation.
 const _registerOnNotificationInstall = () => registerAll();
 
 // Get notification module and register mappers & emitter when the module is available
@@ -34,7 +35,5 @@ const destroy = () => ModuleHelper.emitter.off("module.*.onInstalled", _register
 module.exports = {
 	init,
 	destroy,
-	registerAll,
-	// Exposed because whe need to be able to unregister event listeners on module unninstallation.
-	registerOnNotificationInstall
+	registerAll
 };
