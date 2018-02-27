@@ -1,1 +1,6 @@
-module.exports = (eventName, configuredEvent, data) => console.log("Nieuws mapper") || data;
+module.exports = (eventName, configuredEvent, data) => {
+
+	// MAP DATA HERE!
+
+	return data;
+};

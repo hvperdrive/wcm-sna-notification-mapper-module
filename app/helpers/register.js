@@ -31,7 +31,7 @@ const unregisterAll = () => {
 }
 
 const init = () => {
-	return getModule()
+	return registerAll()
 		// Listen for module installl events to register the mappers & emitters on notification installation.
 		.finally(() => ModuleHelper.emitter.onUnchecked("module.*.onInstalled", _registerOnNotificationInstall));
 };
