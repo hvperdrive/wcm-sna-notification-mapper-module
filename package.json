@@ -27,6 +27,7 @@
     "license": "ISC",
     "dependencies": {
         "@wcm/module-helper": "1.0.0",
+        "eslint-plugin-chai-friendly": "^0.4.1",
         "path": "^0.12.7",
         "q": "^1.5.1",
         "request": "^2.83.0",
