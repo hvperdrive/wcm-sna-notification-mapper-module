@@ -15,7 +15,7 @@ module.exports = (eventName, event, data) => {
 	} else {
 		// En content is verplicht
 		title.en = "";
-		description.en = " ";
+		description.en = "empty";
 	}
 
 	if (data.fields.url.nl) {
@@ -39,8 +39,14 @@ module.exports = (eventName, event, data) => {
 
 		description.de = cleanDescription;
 	}
+
+	// check if expireDate and sendDate is avaidable
+	let lifetime;
+
+	if (data.fields.expireDate && data.fields.sendDate) {
+		lifetime = (new Date(data.fields.expireDate) - new Date(data.fields.sendDate)) / 1000;
+	}
 	
-	const lifetime = (new Date(data.fields.expireDate) - new Date(data.fields.sendDate)) / 1000;
 
 	let message = {
 		"app_id": "a58dfb59-f1c5-4444-858e-565342c05d94",
