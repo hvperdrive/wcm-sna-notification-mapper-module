@@ -1,5 +1,4 @@
-module.exports = (data) => {
-	// MAP DATA HERE!
+module.exports = (eventName, event, data) => {
 	if (data.fields.medium.app === false) {
 		return;
 	}
