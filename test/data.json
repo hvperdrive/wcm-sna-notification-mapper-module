@@ -1,1022 +1,331 @@
 {
-   "_id":"5abcea50335157b68314bd9c",
-   "fields":{
-      "medium":{
-         "app":true,
-         "website":false
-      },
-      "url":{
-         "nl":{
-            "description":"Park en drive nu",
-            "url":"https://www.slimnaarantwerpen.be/nl/nieuws/vanaf-nu-kan-u-de-park-and-bike-gebruiken-aan-havana",
-            "type":"external"
-         },
-         "multiLanguage":true
-      },
-      "description":{
-         "nl":"<p>De content van de notificatie</p>\n",
-         "multiLanguage":true
-      },
-      "expireDate":"2018-04-01T08:00:00.000Z",
-      "sendDate":"2018-03-31T10:00:00.000Z"
-   },
-   "meta":{
-      "contentType":{
-         "_id":"591c1736297d0c0e7945f5b2",
-         "versions":[
-            {
-               "__v":0,
-               "uuid":"0671b00d-0496-4ba7-b711-5321c6f0a3b2",
-               "meta":{
-                  "label":"Notification",
-                  "description":"Template for a notification",
-                  "safeLabel":"notification",
-                  "lastEditor":"58f9cf89f8d9b34f765a60a2",
-                  "canBeFiltered":false,
-                  "deleted":false,
-                  "hitCount":0,
-                  "taxonomy":{
-                     "tags":[
-
-                     ],
-                     "fieldType":"Taxonomy",
-                     "available":[
-
-                     ]
-                  },
-                  "lastModified":"2017-05-17T15:20:50.483Z",
-                  "created":"2017-05-17T09:26:14.934Z"
-               },
-               "fields":[
-                  {
-                     "uuid":"100f27f0-a572-48df-b646-6e97ad630e1a",
-                     "taxonomyLists":[
-
-                     ],
-                     "min":1,
-                     "max":1,
-                     "options":[
-
-                     ],
-                     "multiLanguage":true,
-                     "indexed":false,
-                     "dataType":"string",
-                     "operators":[
-                        {
-                           "label":"Equals",
-                           "value":"equals"
-                        },
-                        {
-                           "label":"Contains",
-                           "value":"i"
-                        },
-                        {
-                           "label":"Starts with",
-                           "value":"^"
-                        },
-                        {
-                           "label":"Ends with",
-                           "value":"$"
-                        }
-                     ],
-                     "label":"Noticatie text",
-                     "type":"richtext",
-                     "validation":{
-                        "required":true
-                     },
-                     "_id":"description"
-                  },
-                  {
-                     "uuid":"62d42388-7c36-47e1-8e65-2269857c07f4",
-                     "taxonomyLists":[
-
-                     ],
-                     "min":1,
-                     "max":1,
-                     "options":[
-
-                     ],
-                     "multiLanguage":true,
-                     "indexed":false,
-                     "dataType":"string",
-                     "operators":[
-                        {
-                           "label":"Equals",
-                           "value":"equals"
-                        },
-                        {
-                           "label":"Contains",
-                           "value":"i"
-                        },
-                        {
-                           "label":"Starts with",
-                           "value":"^"
-                        },
-                        {
-                           "label":"Ends with",
-                           "value":"$"
-                        }
-                     ],
-                     "label":"url",
-                     "type":"url",
-                     "validation":{
-                        "required":false
-                     },
-                     "_id":"url"
-                  }
-               ],
-               "versions":[
-
-               ],
-               "_id":"591c1736297d0c0e7945f5b2"
-            },
-            {
-               "_id":"591c1736297d0c0e7945f5b2",
-               "versions":[
-
-               ],
-               "fields":[
-                  {
-                     "_id":"description",
-                     "validation":{
-                        "required":true
-                     },
-                     "type":"richtext",
-                     "label":"Noticatie text",
-                     "operators":[
-                        {
-                           "label":"Equals",
-                           "value":"equals"
-                        },
-                        {
-                           "label":"Contains",
-                           "value":"i"
-                        },
-                        {
-                           "label":"Starts with",
-                           "value":"^"
-                        },
-                        {
-                           "label":"Ends with",
-                           "value":"$"
-                        }
-                     ],
-                     "dataType":"string",
-                     "indexed":false,
-                     "multiLanguage":true,
-                     "options":[
-
-                     ],
-                     "max":1,
-                     "min":1,
-                     "taxonomyLists":[
-
-                     ],
-                     "uuid":"100f27f0-a572-48df-b646-6e97ad630e1a"
-                  },
-                  {
-                     "_id":"url",
-                     "validation":{
-                        "required":false
-                     },
-                     "type":"url",
-                     "label":"Url",
-                     "operators":[
-                        {
-                           "value":"equals",
-                           "label":"Equals"
-                        },
-                        {
-                           "value":"i",
-                           "label":"Contains"
-                        },
-                        {
-                           "value":"^",
-                           "label":"Starts with"
-                        },
-                        {
-                           "value":"$",
-                           "label":"Ends with"
-                        }
-                     ],
-                     "dataType":"string",
-                     "indexed":false,
-                     "multiLanguage":true,
-                     "options":[
-
-                     ],
-                     "max":1,
-                     "min":1,
-                     "taxonomyLists":[
-
-                     ],
-                     "uuid":"62d42388-7c36-47e1-8e65-2269857c07f4"
-                  }
-               ],
-               "meta":{
-                  "created":"2017-05-17T09:26:14.934Z",
-                  "lastModified":"2017-05-18T09:15:18.237Z",
-                  "taxonomy":{
-                     "available":[
-
-                     ],
-                     "fieldType":"Taxonomy",
-                     "tags":[
-
-                     ]
-                  },
-                  "hitCount":0,
-                  "deleted":false,
-                  "canBeFiltered":false,
-                  "label":"Notification",
-                  "description":"Template for a notification",
-                  "safeLabel":"notification",
-                  "lastEditor":"58f9cf89f8d9b34f765a60a2"
-               },
-               "uuid":"0671b00d-0496-4ba7-b711-5321c6f0a3b2",
-               "__v":0
-            },
-            {
-               "__v":0,
-               "uuid":"0671b00d-0496-4ba7-b711-5321c6f0a3b2",
-               "meta":{
-                  "label":"Notification",
-                  "description":"Notificatie",
-                  "safeLabel":"notification",
-                  "lastEditor":"591d760699016f5ae92508b3",
-                  "canBeFiltered":false,
-                  "deleted":false,
-                  "hitCount":0,
-                  "taxonomy":{
-                     "tags":[
-
-                     ],
-                     "fieldType":"Taxonomy",
-                     "available":[
-
-                     ]
-                  },
-                  "lastModified":"2017-05-19T07:54:41.366Z",
-                  "created":"2017-05-17T09:26:14.934Z"
-               },
-               "fields":[
-                  {
-                     "dataType":"string",
-                     "operators":[
-                        {
-                           "label":"Equals",
-                           "value":"equals"
-                        },
-                        {
-                           "label":"Contains",
-                           "value":"i"
-                        },
-                        {
-                           "label":"Starts with",
-                           "value":"^"
-                        },
-                        {
-                           "label":"Ends with",
-                           "value":"$"
-                        }
-                     ],
-                     "label":"Noticatie text",
-                     "type":"richtext",
-                     "validation":{
-                        "required":true
-                     },
-                     "_id":"description",
-                     "indexed":false,
-                     "multiLanguage":true,
-                     "options":[
-
-                     ],
-                     "max":1,
-                     "min":1,
-                     "taxonomyLists":[
-
-                     ],
-                     "uuid":"100f27f0-a572-48df-b646-6e97ad630e1a"
-                  },
-                  {
-                     "dataType":"string",
-                     "operators":[
-                        {
-                           "value":"equals",
-                           "label":"Equals"
-                        },
-                        {
-                           "value":"i",
-                           "label":"Contains"
-                        },
-                        {
-                           "value":"^",
-                           "label":"Starts with"
-                        },
-                        {
-                           "value":"$",
-                           "label":"Ends with"
-                        }
-                     ],
-                     "label":"Url",
-                     "type":"url",
-                     "validation":{
-                        "required":false
-                     },
-                     "_id":"url",
-                     "indexed":false,
-                     "multiLanguage":true,
-                     "options":[
-
-                     ],
-                     "max":1,
-                     "min":1,
-                     "taxonomyLists":[
-
-                     ],
-                     "uuid":"62d42388-7c36-47e1-8e65-2269857c07f4"
-                  }
-               ],
-               "versions":[
-
-               ],
-               "_id":"591c1736297d0c0e7945f5b2"
-            },
-            {
-               "_id":"591c1736297d0c0e7945f5b2",
-               "versions":[
-
-               ],
-               "fields":[
-                  {
-                     "dataType":"string",
-                     "operators":[
-                        {
-                           "label":"Equals",
-                           "value":"equals"
-                        },
-                        {
-                           "label":"Contains",
-                           "value":"i"
-                        },
-                        {
-                           "label":"Starts with",
-                           "value":"^"
-                        },
-                        {
-                           "label":"Ends with",
-                           "value":"$"
-                        }
-                     ],
-                     "label":"Noticatie text",
-                     "type":"richtext",
-                     "validation":{
-                        "required":true
-                     },
-                     "_id":"description",
-                     "indexed":false,
-                     "multiLanguage":true,
-                     "options":[
-
-                     ],
-                     "max":1,
-                     "min":1,
-                     "taxonomyLists":[
-
-                     ],
-                     "uuid":"100f27f0-a572-48df-b646-6e97ad630e1a"
-                  },
-                  {
-                     "dataType":"string",
-                     "operators":[
-                        {
-                           "value":"equals",
-                           "label":"Equals"
-                        },
-                        {
-                           "value":"i",
-                           "label":"Contains"
-                        },
-                        {
-                           "value":"^",
-                           "label":"Starts with"
-                        },
-                        {
-                           "value":"$",
-                           "label":"Ends with"
-                        }
-                     ],
-                     "label":"Url",
-                     "type":"url",
-                     "validation":{
-                        "required":false
-                     },
-                     "_id":"url",
-                     "indexed":false,
-                     "multiLanguage":true,
-                     "options":[
-
-                     ],
-                     "max":1,
-                     "min":1,
-                     "taxonomyLists":[
-
-                     ],
-                     "uuid":"62d42388-7c36-47e1-8e65-2269857c07f4"
-                  },
-                  {
-                     "dataType":"object",
-                     "operators":[
-                        {
-                           "value":"is",
-                           "label":"Is"
-                        },
-                        {
-                           "value":"is not",
-                           "label":"Is not"
-                        }
-                     ],
-                     "label":"Medium",
-                     "type":"checkbox",
-                     "validation":{
-                        "required":true
-                     },
-                     "_id":"medium",
-                     "indexed":false,
-                     "multiLanguage":false,
-                     "options":[
-                        {
-                           "key":"website",
-                           "label":"Website",
-                           "_id":"5abcd800335157b68314bd99"
-                        },
-                        {
-                           "key":"app",
-                           "label":"App",
-                           "_id":"5abcd800335157b68314bd98"
-                        }
-                     ],
-                     "max":1,
-                     "min":1,
-                     "taxonomyLists":[
-
-                     ],
-                     "uuid":"29af3847-2f47-4091-878a-b4e8e9043313"
-                  },
-                  {
-                     "dataType":"date",
-                     "operators":[
-                        {
-                           "value":"greater than",
-                           "label":"After"
-                        },
-                        {
-                           "value":"greater than or equals",
-                           "label":"After or on"
-                        },
-                        {
-                           "value":"lower than",
-                           "label":"Before"
-                        },
-                        {
-                           "value":"lower than or equals",
-                           "label":"Before or on"
-                        },
-                        {
-                           "value":"equals",
-                           "label":"On"
-                        }
-                     ],
-                     "label":"Vervaldatum",
-                     "type":"date",
-                     "validation":{
-                        "required":false
-                     },
-                     "_id":"expireDate",
-                     "indexed":false,
-                     "multiLanguage":false,
-                     "options":[
-
-                     ],
-                     "max":1,
-                     "min":1,
-                     "taxonomyLists":[
-
-                     ],
-                     "uuid":"07a7622a-70c7-4b53-b9cf-0f28a2b64352"
-                  },
-                  {
-                     "dataType":"object",
-                     "operators":[
-                        {
-                           "label":"Is",
-                           "value":"is"
-                        },
-                        {
-                           "label":"Is not",
-                           "value":"is not"
-                        },
-                        {
-                           "label":"Contains all",
-                           "value":"contains all"
-                        },
-                        {
-                           "label":"Contains none",
-                           "value":"contains none"
-                        }
-                     ],
-                     "defaultValue":null,
-                     "label":"Link",
-                     "data":[
-                        "ec07fe79-f907-468c-aace-ee59665d6530"
-                     ],
-                     "type":"content-reference",
-                     "validation":{
-                        "required":true
-                     },
-                     "_id":"link",
-                     "indexed":false,
-                     "multiLanguage":false,
-                     "options":[
-
-                     ],
-                     "max":1,
-                     "min":1,
-                     "taxonomyLists":[
-
-                     ],
-                     "uuid":"21ce18d2-71ac-4986-acce-e0f9240dea36"
-                  }
-               ],
-               "meta":{
-                  "created":"2017-05-17T09:26:14.934Z",
-                  "lastModified":"2018-03-29T12:11:44.109Z",
-                  "taxonomy":{
-                     "available":[
-
-                     ],
-                     "fieldType":"Taxonomy",
-                     "tags":[
-
-                     ]
-                  },
-                  "hitCount":0,
-                  "deleted":false,
-                  "canBeFiltered":false,
-                  "label":"Notification",
-                  "description":"Notificatie",
-                  "safeLabel":"notification",
-                  "lastEditor":"5abcacbdc39aba65207ce7b7"
-               },
-               "uuid":"0671b00d-0496-4ba7-b711-5321c6f0a3b2",
-               "__v":0
-            },
-            {
-               "__v":0,
-               "uuid":"0671b00d-0496-4ba7-b711-5321c6f0a3b2",
-               "meta":{
-                  "label":"Notification",
-                  "description":"Notificatie",
-                  "safeLabel":"notification",
-                  "lastEditor":"5abcacbdc39aba65207ce7b7",
-                  "canBeFiltered":false,
-                  "deleted":false,
-                  "hitCount":0,
-                  "taxonomy":{
-                     "tags":[
-
-                     ],
-                     "fieldType":"Taxonomy",
-                     "available":[
-
-                     ]
-                  },
-                  "lastModified":"2018-03-29T12:32:23.501Z",
-                  "created":"2017-05-17T09:26:14.934Z"
-               },
-               "fields":[
-                  {
-                     "uuid":"100f27f0-a572-48df-b646-6e97ad630e1a",
-                     "taxonomyLists":[
-
-                     ],
-                     "min":1,
-                     "max":1,
-                     "options":[
-
-                     ],
-                     "multiLanguage":true,
-                     "indexed":false,
-                     "dataType":"string",
-                     "operators":[
-                        {
-                           "label":"Equals",
-                           "value":"equals"
-                        },
-                        {
-                           "label":"Contains",
-                           "value":"i"
-                        },
-                        {
-                           "label":"Starts with",
-                           "value":"^"
-                        },
-                        {
-                           "label":"Ends with",
-                           "value":"$"
-                        }
-                     ],
-                     "label":"Noticatie text",
-                     "type":"richtext",
-                     "validation":{
-                        "required":true
-                     },
-                     "_id":"description"
-                  },
-                  {
-                     "uuid":"62d42388-7c36-47e1-8e65-2269857c07f4",
-                     "taxonomyLists":[
-
-                     ],
-                     "min":1,
-                     "max":1,
-                     "options":[
-
-                     ],
-                     "multiLanguage":true,
-                     "indexed":false,
-                     "dataType":"string",
-                     "operators":[
-                        {
-                           "value":"equals",
-                           "label":"Equals"
-                        },
-                        {
-                           "value":"i",
-                           "label":"Contains"
-                        },
-                        {
-                           "value":"^",
-                           "label":"Starts with"
-                        },
-                        {
-                           "value":"$",
-                           "label":"Ends with"
-                        }
-                     ],
-                     "label":"Url",
-                     "type":"url",
-                     "validation":{
-                        "required":false
-                     },
-                     "_id":"url"
-                  },
-                  {
-                     "uuid":"29af3847-2f47-4091-878a-b4e8e9043313",
-                     "taxonomyLists":[
-
-                     ],
-                     "min":1,
-                     "max":1,
-                     "options":[
-                        {
-                           "key":"website",
-                           "label":"Website",
-                           "_id":"5abcd800335157b68314bd99"
-                        },
-                        {
-                           "key":"app",
-                           "label":"App",
-                           "_id":"5abcd800335157b68314bd98"
-                        }
-                     ],
-                     "multiLanguage":false,
-                     "indexed":false,
-                     "dataType":"object",
-                     "operators":[
-                        {
-                           "value":"is",
-                           "label":"Is"
-                        },
-                        {
-                           "value":"is not",
-                           "label":"Is not"
-                        }
-                     ],
-                     "label":"Medium",
-                     "type":"checkbox",
-                     "validation":{
-                        "required":true
-                     },
-                     "_id":"medium"
-                  },
-                  {
-                     "uuid":"07a7622a-70c7-4b53-b9cf-0f28a2b64352",
-                     "taxonomyLists":[
-
-                     ],
-                     "min":1,
-                     "max":1,
-                     "options":[
-
-                     ],
-                     "multiLanguage":false,
-                     "indexed":false,
-                     "dataType":"date",
-                     "operators":[
-                        {
-                           "value":"greater than",
-                           "label":"After"
-                        },
-                        {
-                           "value":"greater than or equals",
-                           "label":"After or on"
-                        },
-                        {
-                           "value":"lower than",
-                           "label":"Before"
-                        },
-                        {
-                           "value":"lower than or equals",
-                           "label":"Before or on"
-                        },
-                        {
-                           "value":"equals",
-                           "label":"On"
-                        }
-                     ],
-                     "label":"Vervaldatum",
-                     "type":"date",
-                     "validation":{
-                        "required":false
-                     },
-                     "_id":"expireDate"
-                  }
-               ],
-               "versions":[
-
-               ],
-               "_id":"591c1736297d0c0e7945f5b2"
-            }
-         ],
-         "fields":[
-            {
-               "dataType":"string",
-               "operators":[
-                  {
-                     "label":"Equals",
-                     "value":"equals"
-                  },
-                  {
-                     "label":"Contains",
-                     "value":"i"
-                  },
-                  {
-                     "label":"Starts with",
-                     "value":"^"
-                  },
-                  {
-                     "label":"Ends with",
-                     "value":"$"
-                  }
-               ],
-               "label":"Noticatie text",
-               "type":"richtext",
-               "validation":{
-                  "required":true
-               },
-               "_id":"description",
-               "indexed":false,
-               "multiLanguage":true,
-               "options":[
-
-               ],
-               "max":1,
-               "min":1,
-               "taxonomyLists":[
-
-               ],
-               "uuid":"100f27f0-a572-48df-b646-6e97ad630e1a"
-            },
-            {
-               "dataType":"string",
-               "operators":[
-                  {
-                     "value":"equals",
-                     "label":"Equals"
-                  },
-                  {
-                     "value":"i",
-                     "label":"Contains"
-                  },
-                  {
-                     "value":"^",
-                     "label":"Starts with"
-                  },
-                  {
-                     "value":"$",
-                     "label":"Ends with"
-                  }
-               ],
-               "label":"Url",
-               "type":"url",
-               "validation":{
-                  "required":false
-               },
-               "_id":"url",
-               "indexed":false,
-               "multiLanguage":true,
-               "options":[
-
-               ],
-               "max":1,
-               "min":1,
-               "taxonomyLists":[
-
-               ],
-               "uuid":"62d42388-7c36-47e1-8e65-2269857c07f4"
-            },
-            {
-               "dataType":"object",
-               "operators":[
-                  {
-                     "value":"is",
-                     "label":"Is"
-                  },
-                  {
-                     "value":"is not",
-                     "label":"Is not"
-                  }
-               ],
-               "label":"Medium",
-               "type":"checkbox",
-               "validation":{
-                  "required":true
-               },
-               "_id":"medium",
-               "indexed":false,
-               "multiLanguage":false,
-               "options":[
-                  {
-                     "key":"website",
-                     "label":"Website",
-                     "_id":"5abcd800335157b68314bd99"
-                  },
-                  {
-                     "key":"app",
-                     "label":"App",
-                     "_id":"5abcd800335157b68314bd98"
-                  }
-               ],
-               "max":1,
-               "min":1,
-               "taxonomyLists":[
-
-               ],
-               "uuid":"29af3847-2f47-4091-878a-b4e8e9043313"
-            },
-            {
-               "dataType":"date",
-               "operators":[
-                  {
-                     "value":"greater than",
-                     "label":"After"
-                  },
-                  {
-                     "value":"greater than or equals",
-                     "label":"After or on"
-                  },
-                  {
-                     "value":"lower than",
-                     "label":"Before"
-                  },
-                  {
-                     "value":"lower than or equals",
-                     "label":"Before or on"
-                  },
-                  {
-                     "value":"equals",
-                     "label":"On"
-                  }
-               ],
-               "label":"Vervaldatum",
-               "type":"datetime",
-               "validation":{
-                  "required":false
-               },
-               "_id":"expireDate",
-               "indexed":false,
-               "multiLanguage":false,
-               "options":[
-
-               ],
-               "max":1,
-               "min":1,
-               "taxonomyLists":[
-
-               ],
-               "uuid":"07a7622a-70c7-4b53-b9cf-0f28a2b64352"
-            },
-            {
-               "dataType":"date",
-               "operators":[
-                  {
-                     "value":"greater than",
-                     "label":"After"
-                  },
-                  {
-                     "value":"greater than or equals",
-                     "label":"After or on"
-                  },
-                  {
-                     "value":"lower than",
-                     "label":"Before"
-                  },
-                  {
-                     "value":"lower than or equals",
-                     "label":"Before or on"
-                  },
-                  {
-                     "value":"equals",
-                     "label":"On"
-                  }
-               ],
-               "label":"Verzenddatum",
-               "type":"datetime",
-               "validation":{
-                  "required":false
-               },
-               "_id":"sendDate",
-               "indexed":false,
-               "multiLanguage":false,
-               "options":[
-
-               ],
-               "max":1,
-               "min":1,
-               "taxonomyLists":[
-
-               ],
-               "uuid":"bd1ab8eb-b24a-4d6a-b387-f0028454b84d"
-            }
-         ],
-         "meta":{
-            "created":"2017-05-17T09:26:14.934Z",
-            "lastModified":"2018-03-29T12:59:43.852Z",
-            "taxonomy":{
-               "available":[
-
-               ],
-               "fieldType":"Taxonomy",
-               "tags":[
-
-               ]
-            },
-            "hitCount":0,
-            "deleted":false,
-            "canBeFiltered":false,
-            "label":"Notification",
-            "description":"Notificatie",
-            "safeLabel":"notification",
-            "lastEditor":"5abcacbdc39aba65207ce7b7"
-         },
-         "uuid":"0671b00d-0496-4ba7-b711-5321c6f0a3b2",
-         "__v":0
-      },
-      "publishDate":"2018-03-29T13:30:00.000Z",
-      "label":"TestNotification",
-      "safeLabel":"test_notification",
-      "parents":{
-         "views":[
-
-         ],
-         "content":[
-
-         ]
-      },
-      "deleted":false,
-      "hasDetail":false,
-      "activeLanguages":[
-         "nl"
-      ],
-      "hitCount":0,
-      "published":true,
-      "lastModified":"2018-03-29T13:43:39.593Z",
-      "created":"2018-03-29T13:29:52.969Z",
-      "taxonomy":{
-         "tags":[
-            "59311a7790f36c1ed8c6f7ae"
-         ],
-         "dataType":"taxonomy",
-         "available":[
-
-         ]
-      },
-      "slug":{
-         "multiLanguage":true
-      },
-      "lastIndex":"2018-03-29T13:43:39.630Z",
-      "status":"PUBLISHED"
-   },
-   "uuid":"031de260-ac5b-4592-b769-7f2da9368a21"
-}
+    "meta":{
+       "activeLanguages":[
+          "nl"
+       ],
+       "contentType":{
+          "_id":"591c1736297d0c0e7945f5b2",
+          "__v":0,
+          "fields":[
+             {
+                "dataType":"string",
+                "operators":[
+                   {
+                      "value":"equals",
+                      "label":"Equals"
+                   },
+                   {
+                      "value":"i",
+                      "label":"Contains"
+                   },
+                   {
+                      "value":"^",
+                      "label":"Starts with"
+                   },
+                   {
+                      "value":"$",
+                      "label":"Ends with"
+                   }
+                ],
+                "label":"Noticatie text",
+                "type":"richtext",
+                "validation":{
+                   "required":true
+                },
+                "_id":"description",
+                "indexed":false,
+                "multiLanguage":true,
+                "options":[
+ 
+                ],
+                "max":1,
+                "min":1,
+                "taxonomyLists":[
+ 
+                ],
+                "uuid":"100f27f0-a572-48df-b646-6e97ad630e1a"
+             },
+             {
+                "dataType":"string",
+                "operators":[
+                   {
+                      "label":"Equals",
+                      "value":"equals"
+                   },
+                   {
+                      "label":"Contains",
+                      "value":"i"
+                   },
+                   {
+                      "label":"Starts with",
+                      "value":"^"
+                   },
+                   {
+                      "label":"Ends with",
+                      "value":"$"
+                   }
+                ],
+                "label":"Url",
+                "type":"url",
+                "validation":{
+                   "required":false
+                },
+                "_id":"url",
+                "indexed":false,
+                "multiLanguage":true,
+                "options":[
+ 
+                ],
+                "max":1,
+                "min":1,
+                "taxonomyLists":[
+ 
+                ],
+                "uuid":"62d42388-7c36-47e1-8e65-2269857c07f4"
+             },
+             {
+                "dataType":"object",
+                "operators":[
+                   {
+                      "label":"Is",
+                      "value":"is"
+                   },
+                   {
+                      "label":"Is not",
+                      "value":"is not"
+                   }
+                ],
+                "label":"Medium",
+                "type":"checkbox",
+                "validation":{
+                   "required":true
+                },
+                "_id":"medium",
+                "indexed":false,
+                "multiLanguage":false,
+                "options":[
+                   {
+                      "key":"website",
+                      "label":"Website",
+                      "_id":"5abcd800335157b68314bd99"
+                   },
+                   {
+                      "key":"app",
+                      "label":"App",
+                      "_id":"5abcd800335157b68314bd98"
+                   }
+                ],
+                "max":1,
+                "min":1,
+                "taxonomyLists":[
+ 
+                ],
+                "uuid":"29af3847-2f47-4091-878a-b4e8e9043313"
+             },
+             {
+                "dataType":"date",
+                "operators":[
+                   {
+                      "value":"greater than",
+                      "label":"After"
+                   },
+                   {
+                      "value":"greater than or equals",
+                      "label":"After or on"
+                   },
+                   {
+                      "value":"lower than",
+                      "label":"Before"
+                   },
+                   {
+                      "value":"lower than or equals",
+                      "label":"Before or on"
+                   },
+                   {
+                      "value":"equals",
+                      "label":"On"
+                   }
+                ],
+                "label":"Verzenddatum (Dit moet in de toekomst zijn)",
+                "type":"datetime",
+                "validation":{
+                   "required":false
+                },
+                "_id":"sendDate",
+                "indexed":false,
+                "multiLanguage":false,
+                "options":[
+ 
+                ],
+                "max":1,
+                "min":1,
+                "taxonomyLists":[
+ 
+                ],
+                "uuid":"bd1ab8eb-b24a-4d6a-b387-f0028454b84d"
+             },
+             {
+                "dataType":"date",
+                "operators":[
+                   {
+                      "label":"After",
+                      "value":"greater than"
+                   },
+                   {
+                      "label":"After or on",
+                      "value":"greater than or equals"
+                   },
+                   {
+                      "label":"Before",
+                      "value":"lower than"
+                   },
+                   {
+                      "label":"Before or on",
+                      "value":"lower than or equals"
+                   },
+                   {
+                      "label":"On",
+                      "value":"equals"
+                   }
+                ],
+                "label":"Vervaldatum",
+                "type":"datetime",
+                "validation":{
+                   "required":false
+                },
+                "_id":"expireDate",
+                "indexed":false,
+                "multiLanguage":false,
+                "options":[
+ 
+                ],
+                "max":1,
+                "min":1,
+                "taxonomyLists":[
+ 
+                ],
+                "uuid":"07a7622a-70c7-4b53-b9cf-0f28a2b64352"
+             },
+             {
+                "dataType":"option",
+                "operators":[
+                   {
+                      "label":"Is",
+                      "value":"is"
+                   },
+                   {
+                      "label":"Is not",
+                      "value":"is not"
+                   }
+                ],
+                "label":"Notificatie Icon",
+                "type":"select",
+                "validation":{
+                   "required":true
+                },
+                "_id":"notificatieIcon",
+                "indexed":false,
+                "multiLanguage":false,
+                "options":[
+                   {
+                      "key":"tram",
+                      "label":"Tram",
+                      "_id":"5abdf5fdbfa1d77611eabbcc"
+                   },
+                   {
+                      "key":"train",
+                      "label":"Trein",
+                      "_id":"5abdf5fdbfa1d77611eabbcb"
+                   },
+                   {
+                      "key":"bus",
+                      "label":"Bus",
+                      "_id":"5abdf5fdbfa1d77611eabbca"
+                   },
+                   {
+                      "key":"velo",
+                      "label":"Velo",
+                      "_id":"5abdf5fdbfa1d77611eabbc9"
+                   },
+                   {
+                      "key":"foot",
+                      "label":"Voetganger",
+                      "_id":"5abdf5fdbfa1d77611eabbc8"
+                   },
+                   {
+                      "key":"bike",
+                      "label":"Fiets",
+                      "_id":"5abdf5fdbfa1d77611eabbc7"
+                   },
+                   {
+                      "key":"car",
+                      "label":"Auto",
+                      "_id":"5abdf5fdbfa1d77611eabbc6"
+                   },
+                   {
+                      "key":"metro",
+                      "label":"Metro",
+                      "_id":"5abdf5fdbfa1d77611eabbc5"
+                   }
+                ],
+                "max":1,
+                "min":1,
+                "taxonomyLists":[
+ 
+                ],
+                "uuid":"4b26aa07-cf62-459c-b8e1-036161ac8242"
+             }
+          ],
+          "meta":{
+             "label":"Notification",
+             "description":"Notificatie",
+             "safeLabel":"notification",
+             "lastEditor":{
+                "user":"Jochem Janssens",
+                "lastLogin":"2018-03-29T09:07:09.545Z",
+                "enabled":true,
+                "created":"2018-03-29T09:07:09.423Z",
+                "avatarUrl":"http://i.imgur.com/sNSay1J.png",
+                "uuid":"5d87b577-aba6-4013-9c55-56c769a9902e"
+             },
+             "canBeFiltered":false,
+             "deleted":false,
+             "hitCount":0,
+             "taxonomy":{
+                "tags":[
+ 
+                ],
+                "fieldType":"Taxonomy",
+                "available":[
+ 
+                ]
+             },
+             "lastModified":"2018-03-30T08:31:57.067Z",
+             "created":"2017-05-17T09:26:14.934Z"
+          },
+          "uuid":"0671b00d-0496-4ba7-b711-5321c6f0a3b2"
+       },
+       "publishDate":"2018-03-30T09:00:00.000Z",
+       "label":"TestIcon",
+       "status":"PUBLISHED"
+    },
+    "fields":{
+       "description":{
+          "multiLanguage":true,
+          "nl":"<p>dzdzdzdzdz</p>\n"
+       },
+       "url":{
+          "multiLanguage":true,
+          "nl":{
+             "type":"external",
+             "url":"https://github.com/jochemjanssens/wcm-sna-notification-mapper-module/blob/develop/app/helpers/mappers/nieuws.js",
+             "description":"zadzadd"
+          }
+       },
+       "medium":{
+          "website":false,
+          "app":true
+       },
+       "notificatieIcon":"metro"
+    }
+ }

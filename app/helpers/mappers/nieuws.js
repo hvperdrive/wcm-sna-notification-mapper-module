@@ -8,12 +8,9 @@ module.exports = (eventName, event, data) => {
 
 	// V: Update WCM date inputs
 	// V: Bekijken toekomst versturen
-	// V = Date formatting
-	// Add Icon
-
-	console.log(data);
+	// V: Date formatting
+	// V: Add Icon
 	
-
 	const title = {};
 	let description = {};
 
@@ -58,7 +55,7 @@ module.exports = (eventName, event, data) => {
 		"app_id": "a58dfb59-f1c5-4444-858e-565342c05d94",
 		"included_segments": ["Active Users"],
 		"data": {
-			"icon": "train",
+			"icon": data.fields.notificatieIcon,
 			"url": data.fields.url.nl.url,
 		},
 		"headings": title,
@@ -66,9 +63,6 @@ module.exports = (eventName, event, data) => {
 		"send_after": sendDate,
 		"ttl": lifetime,
 	};
-
-	//console.log(message);
 	
-
 	return message;
 };
