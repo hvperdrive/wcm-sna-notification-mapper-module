@@ -1,6 +1,6 @@
 {
     "name": "@wcm/sna-notification-mapper",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "SnA notificaton mapper",
     "main": "app",
     "scripts": {
