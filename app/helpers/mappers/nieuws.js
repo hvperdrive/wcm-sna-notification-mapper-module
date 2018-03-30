@@ -11,6 +11,9 @@ module.exports = (eventName, event, data) => {
 	// V = Date formatting
 	// Add Icon
 
+	console.log(data);
+	
+
 	const title = {};
 	let description = {};
 
