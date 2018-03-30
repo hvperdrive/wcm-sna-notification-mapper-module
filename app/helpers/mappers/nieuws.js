@@ -2,14 +2,6 @@ module.exports = (eventName, event, data) => {
 	if (data.fields.medium.app === false) {
 		return null;
 	}
-
-	// V: Check in request is return null
-	// V: Herwerk taalkeuze naar loop over alle talen
-
-	// V: Update WCM date inputs
-	// V: Bekijken toekomst versturen
-	// V: Date formatting
-	// V: Add Icon
 	
 	const title = {};
 	let description = {};
@@ -31,8 +23,12 @@ module.exports = (eventName, event, data) => {
 
 	// 'en' is required:
 	if (!description.en) {
-		// Indien er geen en is
-		description.en = "New notification";
+		// Indien er geen en is geef de nl content mee
+		description.en = data.fields.description.nl.replace(/<\/?[^>]+(>|$)/g, "");
+	}
+	if (!title.en) {
+		// Indien er geen en is geef de nl content mee
+		title.en = data.fields.url.nl.description;
 	}
 
 	// check if expireDate and sendDate is avaiable

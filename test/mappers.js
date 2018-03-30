@@ -10,8 +10,6 @@ describe("Map nieuws helper", function() {
 	it("Map notification for new notification", function(done) {
 		let data = inputData;
 		let result = MapHelper.nieuws(null, null, data);
-
-		console.log(result);
         
 		expect(result).to.be.an("object");
 		expect(result).to.have.property("app_id");
@@ -35,8 +33,6 @@ describe("Map nieuws helper", function() {
 	it("Map notification without the optional data", function(done) {
 		let data = inputDataWithoutRequired;
 		let result = MapHelper.nieuws(null, null, data);
-
-		console.log(result);
         
 		expect(result).to.be.an("object");
 		expect(result).to.have.property("app_id");
