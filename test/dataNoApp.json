@@ -324,7 +324,7 @@
        },
        "medium":{
           "website":false,
-          "app":true
+          "app":false
        },
        "notificatieIcon":"metro"
     }
