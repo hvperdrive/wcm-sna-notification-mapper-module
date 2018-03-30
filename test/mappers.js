@@ -9,6 +9,8 @@ describe("Map nieuws helper", function() {
 	it("Map nieuws for new items", function(done) {
 		let data = inputData;
 		let result = MapHelper.nieuws(null, null, data);
+
+		console.log(result);
         
 		expect(result).to.be.an("object");
 		expect(result).to.have.property("app_id");
