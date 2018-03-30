@@ -3,6 +3,7 @@ let expect = require("chai").expect;
 
 const inputData = require("./data.json");
 const inputDataWithoutRequired = require("./dataOptional.json");
+const inputDataNoApp = require("./dataNoApp.json");
 
 let MapHelper = require("app/helpers/mappers");
 
@@ -51,6 +52,13 @@ describe("Map nieuws helper", function() {
 		expect(result.send_after).to.be.an("string");
 		expect(result).to.have.property("ttl");
 		expect(result.ttl).to.be.an("number");
+		done();
+	});
+	it("App is false", function(done) {
+		let data = inputDataNoApp;
+		let result = MapHelper.nieuws(null, null, data);
+
+		expect(result).to.be.equal(null);
 		done();
 	});
 });
