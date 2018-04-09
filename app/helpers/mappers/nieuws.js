@@ -2,9 +2,9 @@ module.exports = (eventName, event, data) => {
 	if (data.fields.medium.app === false) {
 		return null;
 	}
-	
+
 	const title = {};
-	let description = {};
+	const description = {};
 
 	Object.keys(data.fields.url).forEach(language => {
 		if (language !== "multiLanguage") {
@@ -33,8 +33,8 @@ module.exports = (eventName, event, data) => {
 
 	// check if expireDate and sendDate is avaiable
 	// Base lifetime = 3 dagen
-	let lifetime = 259200;
-	let sendDate = new Date(Date.now()).toString();
+	const lifetime = 259200;
+	const sendDate = new Date(Date.now()).toString();
 
 	if (data.fields.expireDate && data.fields.sendDate) {
 		if (new Date(data.fields.expireDate) > new Date(data.fields.sendDate)) {
@@ -47,7 +47,7 @@ module.exports = (eventName, event, data) => {
 		sendDate = sendDateContent.toString();
 	}
 
-	let message = {
+	const message = {
 		"app_id": "a58dfb59-f1c5-4444-858e-565342c05d94",
 		"included_segments": ["Active Users"],
 		"data": {
@@ -59,6 +59,6 @@ module.exports = (eventName, event, data) => {
 		"send_after": sendDate,
 		"ttl": lifetime,
 	};
-	
+
 	return message;
 };
