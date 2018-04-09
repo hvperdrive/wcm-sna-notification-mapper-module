@@ -1,3 +1,7 @@
+import striptags from "striptags";
+const Entities = require("html-entities").AllHtmlEntities;
+const entities = new Entities();
+
 module.exports = (eventName, event, data) => {
 	if (data.fields.medium.app === false) {
 		return null;
@@ -15,7 +19,7 @@ module.exports = (eventName, event, data) => {
 	Object.keys(data.fields.description).forEach(language => {
 		if (language !== "multiLanguage") {
 			const fieldContent = data.fields.description[language];
-			const cleanFieldContent = fieldContent.replace(/<\/?[^>]+(>|$)/g, "");
+			const cleanFieldContent = entities.decode(striptags(fieldContent));
 
 			description[language] = cleanFieldContent;
 		}
@@ -24,7 +28,7 @@ module.exports = (eventName, event, data) => {
 	// 'en' is required:
 	if (!description.en) {
 		// Indien er geen en is geef de nl content mee
-		description.en = data.fields.description.nl.replace(/<\/?[^>]+(>|$)/g, "");
+		description.en = entities.decode(striptags(data.fields.description.nl));
 	}
 	if (!title.en) {
 		// Indien er geen en is geef de nl content mee
