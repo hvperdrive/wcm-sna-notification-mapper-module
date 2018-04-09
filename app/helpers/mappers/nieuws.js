@@ -33,8 +33,8 @@ module.exports = (eventName, event, data) => {
 
 	// check if expireDate and sendDate is avaiable
 	// Base lifetime = 3 dagen
-	const lifetime = 259200;
-	const sendDate = new Date(Date.now()).toString();
+	let lifetime = 259200;
+	let sendDate = new Date(Date.now()).toString();
 
 	if (data.fields.expireDate && data.fields.sendDate) {
 		if (new Date(data.fields.expireDate) > new Date(data.fields.sendDate)) {
