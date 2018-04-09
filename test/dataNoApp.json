@@ -36,12 +36,12 @@
                 "indexed":false,
                 "multiLanguage":true,
                 "options":[
- 
+
                 ],
                 "max":1,
                 "min":1,
                 "taxonomyLists":[
- 
+
                 ],
                 "uuid":"100f27f0-a572-48df-b646-6e97ad630e1a"
              },
@@ -74,12 +74,12 @@
                 "indexed":false,
                 "multiLanguage":true,
                 "options":[
- 
+
                 ],
                 "max":1,
                 "min":1,
                 "taxonomyLists":[
- 
+
                 ],
                 "uuid":"62d42388-7c36-47e1-8e65-2269857c07f4"
              },
@@ -118,7 +118,7 @@
                 "max":1,
                 "min":1,
                 "taxonomyLists":[
- 
+
                 ],
                 "uuid":"29af3847-2f47-4091-878a-b4e8e9043313"
              },
@@ -155,12 +155,12 @@
                 "indexed":false,
                 "multiLanguage":false,
                 "options":[
- 
+
                 ],
                 "max":1,
                 "min":1,
                 "taxonomyLists":[
- 
+
                 ],
                 "uuid":"bd1ab8eb-b24a-4d6a-b387-f0028454b84d"
              },
@@ -197,12 +197,12 @@
                 "indexed":false,
                 "multiLanguage":false,
                 "options":[
- 
+
                 ],
                 "max":1,
                 "min":1,
                 "taxonomyLists":[
- 
+
                 ],
                 "uuid":"07a7622a-70c7-4b53-b9cf-0f28a2b64352"
              },
@@ -223,7 +223,7 @@
                 "validation":{
                    "required":true
                 },
-                "_id":"notificatieIcon",
+                "_id":"icon",
                 "indexed":false,
                 "multiLanguage":false,
                 "options":[
@@ -271,7 +271,7 @@
                 "max":1,
                 "min":1,
                 "taxonomyLists":[
- 
+
                 ],
                 "uuid":"4b26aa07-cf62-459c-b8e1-036161ac8242"
              }
@@ -293,11 +293,11 @@
              "hitCount":0,
              "taxonomy":{
                 "tags":[
- 
+
                 ],
                 "fieldType":"Taxonomy",
                 "available":[
- 
+
                 ]
              },
              "lastModified":"2018-03-30T08:31:57.067Z",
@@ -326,6 +326,6 @@
           "website":false,
           "app":false
        },
-       "notificatieIcon":"metro"
+       "icon":"metro"
     }
  }

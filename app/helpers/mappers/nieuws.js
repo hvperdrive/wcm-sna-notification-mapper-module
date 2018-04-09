@@ -51,7 +51,7 @@ module.exports = (eventName, event, data) => {
 		"app_id": "a58dfb59-f1c5-4444-858e-565342c05d94",
 		"included_segments": ["Active Users"],
 		"data": {
-			"icon": data.fields.notificatieIcon,
+			"icon": data.fields.icon,
 			"url": data.fields.url.nl.url,
 		},
 		"headings": title,
