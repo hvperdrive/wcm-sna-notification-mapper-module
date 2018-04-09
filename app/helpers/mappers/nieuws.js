@@ -1,10 +1,14 @@
+import striptags from "striptags";
+const Entities = require("html-entities").AllHtmlEntities;
+const entities = new Entities();
+
 module.exports = (eventName, event, data) => {
 	if (data.fields.medium.app === false) {
 		return null;
 	}
-	
+
 	const title = {};
-	let description = {};
+	const description = {};
 
 	Object.keys(data.fields.url).forEach(language => {
 		if (language !== "multiLanguage") {
@@ -15,7 +19,7 @@ module.exports = (eventName, event, data) => {
 	Object.keys(data.fields.description).forEach(language => {
 		if (language !== "multiLanguage") {
 			const fieldContent = data.fields.description[language];
-			const cleanFieldContent = fieldContent.replace(/<\/?[^>]+(>|$)/g, "");
+			const cleanFieldContent = entities.decode(striptags(fieldContent));
 
 			description[language] = cleanFieldContent;
 		}
@@ -24,7 +28,7 @@ module.exports = (eventName, event, data) => {
 	// 'en' is required:
 	if (!description.en) {
 		// Indien er geen en is geef de nl content mee
-		description.en = data.fields.description.nl.replace(/<\/?[^>]+(>|$)/g, "");
+		description.en = entities.decode(striptags(data.fields.description.nl));
 	}
 	if (!title.en) {
 		// Indien er geen en is geef de nl content mee
@@ -47,11 +51,11 @@ module.exports = (eventName, event, data) => {
 		sendDate = sendDateContent.toString();
 	}
 
-	let message = {
+	const message = {
 		"app_id": "a58dfb59-f1c5-4444-858e-565342c05d94",
 		"included_segments": ["Active Users"],
 		"data": {
-			"icon": data.fields.notificatieIcon,
+			"icon": data.fields.icon,
 			"url": data.fields.url.nl.url,
 		},
 		"headings": title,
@@ -59,6 +63,6 @@ module.exports = (eventName, event, data) => {
 		"send_after": sendDate,
 		"ttl": lifetime,
 	};
-	
+
 	return message;
 };

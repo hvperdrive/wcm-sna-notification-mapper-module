@@ -1,6 +1,6 @@
 {
     "name": "@wcm/sna-notification-mapper",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "SnA notificaton mapper",
     "main": "app",
     "scripts": {
@@ -28,10 +28,12 @@
     "dependencies": {
         "@wcm/module-helper": "1.0.0",
         "eslint-plugin-chai-friendly": "^0.4.1",
+        "html-entities": "^1.2.1",
         "path": "^0.12.7",
         "q": "^1.5.1",
         "request": "^2.83.0",
-        "rootpath": "~0.1.2"
+        "rootpath": "~0.1.2",
+        "striptags": "^3.1.1"
     },
     "devDependencies": {
         "@district01/eslint-config": "1.0.0",
