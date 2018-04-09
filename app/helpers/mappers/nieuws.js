@@ -1,4 +1,4 @@
-import striptags from "striptags";
+const striptags = require("striptags");
 const Entities = require("html-entities").AllHtmlEntities;
 const entities = new Entities();
 
