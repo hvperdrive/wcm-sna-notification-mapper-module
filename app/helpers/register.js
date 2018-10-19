@@ -1,4 +1,4 @@
-const ModuleHelper = require("@wcm/module-helper")
+const ModuleHelper = require("@wcm/module-helper");
 const mappers = require("./mappers");
 const emitters = require("./emitters");
 
@@ -28,7 +28,7 @@ const unregisterAll = () => {
 			Object.keys(mappers).forEach((key) => notificationAPI.unregisterMapper(key));
 			Object.keys(emitters).forEach((key) => notificationAPI.unregisterEmitter(key));
 		});
-}
+};
 
 const init = () => {
 	return registerAll()
@@ -42,5 +42,5 @@ const destroy = () => ModuleHelper.emitter.off("module.*.onInstalled", _register
 module.exports = {
 	init,
 	destroy,
-	registerAll
+	registerAll,
 };
