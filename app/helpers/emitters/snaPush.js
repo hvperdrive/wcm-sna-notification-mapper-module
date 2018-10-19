@@ -21,7 +21,7 @@ module.exports = (eventName, configuredEvent, data) => {
 		let req = https.request(options);
 
 		req.on("error", (error) => {
-			console.log("NOTIFICATIONONE_SIGNAL_EMIT_ERRORE", error); // eslint-disable-line no-console
+			console.log("NOTIFICATIONONE_SIGNAL_EMIT_ERROR", error); // eslint-disable-line no-console
 		});
 
 		req.write(JSON.stringify(data));
