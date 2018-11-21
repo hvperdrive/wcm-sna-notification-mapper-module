@@ -1,6 +1,17 @@
 const striptags = require("striptags");
 const Entities = require("html-entities").AllHtmlEntities;
 const entities = new Entities();
+const Variables = require("../variables");
+
+const getIncludedSegments = () => {
+	const segmentVar = Variables.get().segments;
+
+	if (typeof segmentVar !== "string") {
+		return [];
+	}
+
+	return segmentVar.split(",");
+};
 
 module.exports = (eventName, event, data) => {
 	if (data.fields.medium.app === false) {
@@ -52,8 +63,8 @@ module.exports = (eventName, event, data) => {
 	}
 
 	const message = {
-		"app_id": "a58dfb59-f1c5-4444-858e-565342c05d94",
-		"included_segments": ["Active Users"],
+		"app_id": Variables.get().appId, //"a58dfb59-f1c5-4444-858e-565342c05d94",
+		"included_segments": getIncludedSegments(),
 		"data": {
 			"icon": data.fields.icon,
 			"url": data.fields.url.nl.url,
