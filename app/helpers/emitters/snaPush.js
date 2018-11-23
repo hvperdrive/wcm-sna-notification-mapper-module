@@ -14,19 +14,17 @@ module.exports = (eventName, configuredEvent, data) => {
 			method: "POST",
 			headers: headers,
 		};
-		
-		let https = require("https");
-		let req = https.request(options, (res) => {
-			res.on("data", () => {
-				// console.log(JSON.parse(response));
-			});
-		});
-		
-		req.on("error", () => {
-			// console.log(e);
-		});
-		
-		req.write(JSON.stringify(data));
-		req.end();
+
+		console.log(data);
+		console.log(options);
+
+		// const req = https.request(options);
+
+		// req.on("error", (error) => {
+		// 	console.log("NOTIFICATIONONE_SIGNAL_EMIT_ERROR", error); // eslint-disable-line no-console
+		// });
+
+		// req.write(JSON.stringify(data));
+		// req.end();
 	}
 };
