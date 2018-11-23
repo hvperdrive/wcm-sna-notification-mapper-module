@@ -25,6 +25,7 @@ const unregisterAll = () => {
 			if (!notificationAPI) {
 				return;
 			}
+
 			Object.keys(mappers).forEach((key) => notificationAPI.unregisterMapper(key));
 			Object.keys(emitters).forEach((key) => notificationAPI.unregisterEmitter(key));
 		});
@@ -36,11 +37,15 @@ const init = () => {
 		.finally(() => ModuleHelper.emitter.onUnchecked("module.*.onInstalled", _registerOnNotificationInstall));
 };
 
-const destroy = () => ModuleHelper.emitter.off("module.*.onInstalled", _registerOnNotificationInstall);
+const destroy = () => {
+	ModuleHelper.emitter.off("module.*.onInstalled", _registerOnNotificationInstall);
+	unregisterAll();
+};
 
 // Init
 module.exports = {
 	init,
 	destroy,
 	registerAll,
+	unregisterAll,
 };
