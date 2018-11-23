@@ -16,6 +16,7 @@ module.exports = (eventName, configuredEvent, data) => {
 			method: "POST",
 			headers: headers,
 		};
+
 		const req = https.request(options);
 
 		req.on("error", (error) => {
