@@ -1,4 +1,5 @@
 const Variables = require("../variables");
+const https = require("https");
 
 module.exports = (eventName, configuredEvent, data) => {
 
@@ -17,16 +18,13 @@ module.exports = (eventName, configuredEvent, data) => {
 			headers: headers,
 		};
 
-		console.log(data);
-		console.log(options);
+		const req = https.request(options);
 
-		// const req = https.request(options);
+		req.on("error", (error) => {
+			console.log("NOTIFICATIONONE_SIGNAL_EMIT_ERROR", error); // eslint-disable-line no-console
+		});
 
-		// req.on("error", (error) => {
-		// 	console.log("NOTIFICATIONONE_SIGNAL_EMIT_ERROR", error); // eslint-disable-line no-console
-		// });
-
-		// req.write(JSON.stringify(data));
-		// req.end();
+		req.write(JSON.stringify(data));
+		req.end();
 	}
 };
