@@ -21,7 +21,26 @@
         "CMS"
     ],
     "wcmModule": {
-        "variables": []
+        "variables": [{
+          "label": "App id",
+          "key": "appId",
+          "value": "",
+          "type": "text",
+          "required": true
+        }, {
+          "label": "Included segments (comma seperated)",
+          "description": "Define wich segments the notification should be send to",
+          "key": "segments",
+          "value": "Test users (ACC)",
+          "type": "text",
+          "required": true
+        }, {
+          "label": "Authorization Code",
+          "key": "authCode",
+          "value": "",
+          "type": "text",
+          "required": true
+        }]
     },
     "author": "Jeroen Valcke",
     "license": "ISC",

@@ -1,12 +1,14 @@
+const Variables = require("../variables");
+
 module.exports = (eventName, configuredEvent, data) => {
 
 	// SEND DATA TO PUSH NOTIFICATION SERVICE HERE (Data should already be mapped)
 	if (data !== null) {
 		let headers = {
 			"Content-Type": "application/json; charset=utf-8",
-			"Authorization": "Basic OWUwZTU0MmYtYmQ4NS00MTYzLTk3MTgtNWRmMzA2YTc5NTRk",
+			"Authorization": `Basic ${Variables.get().authCode}`,
 		};
-		
+
 		let options = {
 			host: "onesignal.com",
 			port: 443,
