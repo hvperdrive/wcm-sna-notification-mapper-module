@@ -4,8 +4,7 @@ const RegisterHelper = require("./helpers/register");
 
 module.exports = (app, hooks, moduleInfo) => {
 	// Get variables and register all mappers & emitters
-	variablesHelper.reload(moduleInfo)
-		.then(() => RegisterHelper.init());
+	variablesHelper.reload(moduleInfo).then(() => RegisterHelper.init());
 
 	// Handle hooks
 	hooksController.handleHooks(hooks);

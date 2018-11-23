@@ -12,4 +12,5 @@ const beforeRemove = () => RegisterHelper.destroy();
 module.exports.handleHooks = hooks => Object.assign(hooks, {
 	onLoadComplete,
 	onConfigurationChanged,
+	beforeRemove,
 });
